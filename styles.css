@@ -1,0 +1,171 @@
+@import url("https://fonts.google.com/specimen/Figtree");
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  --color-yellow: hsl(47, 88%, 63%);
+  --color-gray-500: hsl(0, 0%, 42%);
+  --color-gray-950: hsl(0, 0%, 7%);
+}
+
+body {
+  background-color: var(--color-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-wrapper {
+  margin-inline: 12px;
+}
+
+.card {
+  background-color: white;
+  margin: 0 auto;
+  max-width: 384px;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid var(--color-gray-950);
+  font-family: "FigTree", sans-serif;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: calc(200 / 16 * 1rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-wrapper img {
+  border-radius: 10px;
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--color-yellow);
+  color: var(--color-gray-950);
+  text-align: center;
+  padding: calc(4 / 16 * 1rem) calc(12 / 16 * 1rem);
+  font-size: calc(14 / 16 * 1rem);
+  font-weight: 700;
+  margin-top: 24px;
+}
+
+.date {
+  font-size: calc(14 / 16 * 1rem);
+  color: var(--color-gray-950);
+  margin-top: 12px;
+}
+
+.title {
+  font-size: calc(24 / 16 * 1rem);
+  color: var(--color-gray-950);
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--color-gray-500);
+  margin-top: 12px;
+}
+
+.author-wrapper {
+  margin-top: 24px;
+}
+
+.author-wrapper img {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  vertical-align: top;
+}
+
+.author-wrapper p {
+  display: inline-block;
+  margin-left: calc(12 / 16 * 1rem);
+  font-weight: 700;
+  font-size: calc(14 / 16 * 1rem);
+  vertical-align: middle;
+  padding-top: 4px;
+}
