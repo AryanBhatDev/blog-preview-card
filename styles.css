@@ -163,7 +163,7 @@ body {
 
 .author-wrapper p {
   display: inline-block;
-  margin-left: calc(12 / 16 * 1rem);
+  margin-left: calc(8 / 16 * 1rem);
   font-weight: 700;
   font-size: calc(14 / 16 * 1rem);
   vertical-align: middle;
